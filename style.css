@@ -27,11 +27,9 @@
 }
 
 body {
-  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
-  margin: 0;
-  background: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0 10px;
 }
 
 /* ===== ヘッダー ===== */
@@ -57,16 +55,9 @@ nav {
 }
 
 nav a {
-  position: relative;
-  display: inline-block;
-  color: #fff;
-  background: var(--main-color);
-  text-decoration: none;
-  padding: 0.5rem 1.1rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: var(--transition);
-  box-shadow: var(--shadow);
+ display: inline-block;
+  padding: 8px 10px;
+  font-size: 0.9rem;
 }
 
 nav a::after {
@@ -172,9 +163,9 @@ input, textarea, select {
 
 /* ===== カードレイアウト ===== */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .card {
@@ -238,7 +229,6 @@ footer {
   }
 }
 
-
 /* ===== スマホ対応（画面幅600px以下） ===== */
 @media screen and (max-width: 600px) {
 
@@ -296,4 +286,20 @@ footer {
   }
 }
 
+/* ===== PC用調整 ===== */
+@media (min-width: 700px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  nav a {
+    padding: 0.5rem 1.1rem;
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.8rem;
+  }
+}
 
