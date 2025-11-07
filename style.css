@@ -237,3 +237,63 @@ footer {
     padding: 1.2rem;
   }
 }
+
+
+/* ===== スマホ対応（画面幅600px以下） ===== */
+@media screen and (max-width: 600px) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+
