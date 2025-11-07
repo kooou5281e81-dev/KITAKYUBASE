@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>つながりこども食堂｜参加予約</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>つながりこども食堂</h1>
+      <nav>
+        <a href="index.html">ホーム</a>
+        <a href="reserve.html">参加予約</a>
+        <a href="support.html">支援・寄付</a>
+        <a href="report.html">活動報告</a>
+        <a href="index.html#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="reserve">
+      <h2>参加予約フォーム</h2>
+      <p>つながりこども食堂への参加を希望される方は、以下のフォームからお申し込みください。<br>
+      ※参加費はホームに記載してます。食材準備の都合上、事前のご連絡にご協力ください。</p>
+
+       <p style="color:#777;">※ 予約フォームのリンクを貼る。</p>
+
+      <p id="reserveMsg" style="color:green;margin-top:1rem;"></p>
+
+      <p style="margin-top:1rem;">または、直接メールでもご予約できます：<br>
+        📧 <a href="mailto:your@organization.example?subject=こども食堂 参加予約">your@organization.example</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>開催予定日</h2>
+      <ul>
+        <li>2025年11月30日（日） 通常開催</li>
+        <li>2025年12月28日（日） クリスマス特別回（要予約）</li>
+        <li>2026年1月4日（日） 新年会（親子イベント）</li>
+      </ul>
+      <p style="color:#777;">※開催日は変更になる場合があります。最新情報はホームページやSNSをご確認ください。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© つながりこども食堂 — 地域でつながる、支え合う。</p>
+  </footer>
+
+  <script>
+    function handleReserve(event) {
+      event.preventDefault();
+      const name = document.getElementById('r_name').value;
+      document.getElementById('reserveMsg').textContent = `${name} さんの参加申込を受け付けました！（サンプル）`;
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
